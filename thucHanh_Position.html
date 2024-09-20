@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            background-color: white;
+            width: 100%;
+            height: 100vh;
+        }
+        .modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.37);
+        }
+        .modal__content{
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            padding: 5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal__content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis suscipit repellat consequuntur nesciunt ipsam libero sint voluptatem perferendis eveniet, voluptatibus sunt quas, distinctio tempore illo fugit sit dignissimos? Accusamus.
+        </div>
+    </div>
+</body>
+</html>

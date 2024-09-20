@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 + .title{
+            /* chọn các thẻ có class "tille" và đứng sau "liền kề" h3 */
+            color: green;
+        }
+
+        h3 ~ .title2{
+            /* chọn các thẻ có class "title2", đứng sau và cùng cấp với h3 */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>title</h3>
+    <h4 class="title">content1</h4>
+    <h5 class="title2">content2</h5>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{
+    /* 16px = 100% */
+    font-size: 62.5%; /*10px = 62.5% = 1rem*/
+    line-height: 1.6rem;
+    font-family: "Roboto", sans-serif; /*sans-serif là font mặc định trc khi tải dc roboto*/
+    box-sizing: border-box;
+    }
+    .list{
+        margin-top: 5rem;
+        display: flex; /*flex giống block chiếm 100% width*/
+        /* flex-direction: row; mặc định của flex */
+        /* flex-direction: row-reverse; */
+        align-items: center;
+        /* align-items: flex-end; dọc từ dưới lên*/
+
+        /* justify-content: flex-start;  mặc định của flex*/
+        justify-content: center;
+        justify-content: space-between;/*2 cái đầu cuối sát lề*/
+        justify-content: space-around;
+        justify-content: space-evenly;
+
+        flex-wrap: nowrap; /*mặc định*/
+        flex-wrap: wrap;
+
+    }
+    .list__item{
+        padding: 1rem;
+        background-color: orange;
+        margin: 0 5px;
+    }
+</style>
+<body>
+    <div class="list">
+        <li class="list__item">1</li>
+        <li class="list__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, similique alias? Delectus ipsum quisquam voluptatem aliquid quia vero dolores architecto, excepturi fugit, optio incidunt soluta itaque porro dolorum a. Ea.</li>
+        <li class="list__item">3</li>
+    </div>
+</body>
+</html>

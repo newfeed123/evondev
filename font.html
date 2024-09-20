@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        *{
+             margin: 0;
+             padding: 0;
+        }
+
+        html{
+             font-size: 62.5%;
+         }
+         
+        body{
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.6rem; /*rem phụ thuộc vào font-size của thẻ html (62.5% = 10px = 1 rem)*/
+            font-weight: 300; /*độ đậm nhạt*/
+            font-style: italic; /*in nghiêng*/
+         }
+
+        p{
+            max-width: 300px;
+            line-height: 1.4;
+            text-align: right;/*mặc định là bên trái*/
+            text-align: center;
+            text-align: justify; /*đều hai bên*/
+            
+            /* khoảng cách giữa các ký tự, các từ */
+            letter-spacing: 1px;
+            word-spacing: 5px;
+
+            /* luôn hiển thị trên 1 dòng , không xuoogns dòng */
+            white-space: nowrap;
+
+            /* hiển thị 3 chấm trên hàng 1 khi quá dài */
+            /* overflow: hidden;
+            text-overflow: ellipsis; */
+
+            /* hiển thị dấu 3 chấm trên hàng thứ 3 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sint magni itaque dicta facere atque, velit provident eos. Doloremque, volup</p>
+</body>
+</html>

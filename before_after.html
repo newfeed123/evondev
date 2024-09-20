@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            position: relative;
+            margin: 2rem;
+            padding-left: 2rem;
+            background-color: blue;
+        }
+        .title:before{
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            border-radius: 1rem;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            /* căn giữa thei chiều dọc */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        Tran Ngoc Huy
+    </div>
+</body>
+</html>

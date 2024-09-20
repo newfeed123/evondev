@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 3rem;
+        }
+
+        /* truy cập đến li đầu tiên để CSS */
+        li:first-of-type{
+            color: blue;
+        }
+        /* li:first-child{
+            color: chartreuse; ko dc vi first-child là thẻ "p"
+        } */
+
+        li:last-of-type{
+            color: red;
+        }
+
+        li:nth-of-type(2){
+            color: green;
+        }
+
+        li:nth-last-of-type(2){
+            color: orange;
+        }
+
+        li:last-of-type span{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, porro. Similique facilis non ducimus accusantium, maiores iusto cumque, quas ad, pariatur iure harum omnis commodi esse dolor. Mollitia, provident quia.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, porro. Similique facilis non ducimus accusantium, maiores iusto cumque, quas ad, pariatur iure harum omnis commodi esse dolor. Mollitia, provident quia.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, porro. Similique facilis non ducimus accusantium, maiores iusto cumque, quas ad, pariatur iure harum omnis commodi esse dolor. Mollitia, provident quia.</p>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li><span>abc</span>
+        </li>
+    </ul>
+</body>
+</html>

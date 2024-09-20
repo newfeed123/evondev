@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* chọn a có href theo yêu cầu */
+        a[href^="https"]{
+            /* ^ : bắt đầu bằng */
+            color: green;
+        }
+
+        a[href$=".vn"]{
+            /* $ : kết thúc */
+            color: cyan;
+        }
+
+        a[href*="www"]{
+            /* * : có chứa */
+            color: blueviolet;
+        }
+
+        p::first-letter{
+            color: red;
+            font-weight: bold;
+            font-size: 4rem;
+        }
+
+        p::first-line{
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="https://google.com">google.com</a>
+    <a href="google.vn">google.vn</a>
+    <a href="www.demo.com">demp</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolorem qui saepe laborum doloremque, dolore sit velit quibusdam molestias mollitia, sint unde ratione totam. Nesciunt explicabo voluptas necessitatibus ipsa provident.</p>
+</body>
+</html>

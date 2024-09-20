@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 100%;
+            height: 50rem;
+            background-color: black;
+            position: relative;
+        }
+        /* thuộc tính position: abs chạy theo phần tử cha có thuộc tính position */
+        .boxed{
+            width: 5rem;
+            height: 5rem;
+            background-color: red;
+            position: absolute; 
+            z-index: 1;           
+        }
+        p{
+            color: white;
+            position: absolute;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="boxed">
+        </div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem numquam rem ad laborum sint odit iste possimus. Consequatur laborum deleniti sunt assumenda rerum illum quasi eligendi voluptas harum! Tempora.</p>
+    </div>
+</body>
+</html>

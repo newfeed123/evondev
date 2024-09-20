@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+             margin: 0;
+             padding: 0;
+         }
+
+         html{
+             font-size: 62.5%;
+         }
+  
+         .boxed{
+             /* thằng lol design nó đưa m khối có độ rộng và chiều cao là 100px (10rem) */
+             /* nhưng m muốn căn giữa content trong khối đó thì m sd padding nhuwg sd padding sẽ làm tăng 
+             kích thước ban đầu của phần tử => sai cmn thiết kế design => sd box-sizing : border-box  */
+            width: 10rem;
+            height: 10rem;
+            border: 5px solid black;
+            padding: 1rem;/*10px*/
+            box-sizing: border-box;
+
+            /* lúc chưa box-sizing thì mặc định box-sizing : content box
+                width = width + padding-left + padding-right + border-left + border-right
+                      = 100px + 10px + 10px + 5px + 5px = 130px
+                height = height + padding-top + padding-bottom + border-top + border-right
+                       = 100px + 10px + 10px + 5px + 5px = 130px
+            */
+
+            /* box-sizing : border-box
+                width và height 100px sẽ bao gồm cả padding và border
+            */
+         }
+    </style>
+</head>
+<body>
+    <div class="boxed">
+
+    </div>
+</body>
+</html>

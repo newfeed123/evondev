@@ -1,0 +1,543 @@
+$primary-color: red;
+$green-color: #00c899;
+$primary: #FC556F;
+$secondary: #fd9c84;
+$gradient: linear-gradient(to right, $primary, $secondary);
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    background-color: #f3f3f3;
+    padding: 2rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+// p{
+//     color: $primary-color;
+// }
+
+.header{
+    &-top{
+        color: red;
+        &:hover{
+            color: olivedrab;
+        }
+    }
+
+    &-content{
+        font-size: 10rem;
+    }
+}
+
+// @mixin mixinName(){}
+
+@mixin size($width, $height: $width) {
+    //10 rem là giá trị mặc định nếu ko truyền vào ở .boxed
+    width: $width;
+    height: $height;
+}
+
+@mixin bg($color: black) {
+    background-color: $color;
+}
+
+.boxed{
+    // width: 10rem;
+    // height: 10rem;
+    @include size(10rem, 20rem);
+
+    // background-color: red;
+    @include bg();/*black*/
+    @include bg(violet);
+}
+
+
+@mixin center($direction: "left"){
+    position: absolute;
+
+    @if $direction == "both"{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @if $direction == "left"{
+        left: 50%;
+        transform: translateX(-50%, -50%);
+    }
+
+    @if $direction == "top"{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.container{
+    width: 100%;
+    height: 40rem;
+    background-color: aquamarine;
+    position: relative;
+    .boxing{
+        @include size(10rem);
+        @include bg(violet);
+        @include center("both");
+    }
+}
+
+.work{
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+
+    &__heading{
+        text-transform: capitalize;
+        color: #1a0a3b;
+        font-weight: bold;
+        font-size: 3rem;
+        // border-bottom: 4px solid $green-color;
+        // display: inline-block;/*chuyeern h2 tu block ve inline-block*/
+        // padding-bottom: 1rem;
+
+        position: relative;
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+        &:before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @include size(3.5rem, 6px);
+            border-radius: 4px;
+            background-color: $green-color;
+        }
+    }
+
+    &__filter{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    &-tab{
+        display: flex;
+        &__item{
+            cursor: pointer;
+            padding: 1rem 1.5rem;
+            border: 1px solid $green-color;
+            text-align: center;
+            border-radius: 2rem 0 2rem 2rem;
+            transition: all .2s ease;
+            &:not(:first-child){
+                margin-left: 1rem;
+            }
+
+            &:hover{
+                color: white;
+                background-color: $green-color;
+            }
+
+        }
+    }
+
+    &__all{
+        display: inline-block;
+        padding: 5px 1rem;
+        font-size: 1.4rem;
+        border-radius: 1rem;
+        color: $green-color;
+        background-color: rgba($green-color, .25);
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap; /*xuống dòng, mặc định là no-wrap*/
+        margin-left: -1.5rem;
+    }
+
+    &__item{
+        width: calc(25% - 1.5rem);
+        border-radius: 6px;
+        overflow: hidden;
+        margin-left: 1.5rem;
+    }
+
+    &__image{
+        @include size(100%);
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+//mobile-width: 320 480 768 1024 1280 1366 1440 1600 1920
+//min-width: 1024px -> >= 1024px
+//max-width: 1023px -> <= 1023px
+
+@media screen and (max-width: 1023px){
+    .work{
+        &__item{
+            width: calc(50% - 1.5rem);
+            margin-bottom: 1.5rem;
+        }
+        &__list{
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 767){
+    .work{
+        &__item{
+            width: 100%;
+        }
+
+        &__filter{
+            flex-direction: column;
+        }
+
+        &__tab{
+            flex-wrap: wrap;
+            justify-content: center;
+            &__item{
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+//Author
+.author{
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    height: 40rem;
+
+    &__image{
+        // width: 35%;
+        // hình méo
+        height: 100%;
+        object-fit: cover;
+    }
+    &__content{
+        // width: 65%;
+        padding: 3rem;
+        background-color: #eee;
+    }
+    &__name{
+        color: #333;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 3rem;
+    }
+    &__desc{
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 3rem;
+    }
+    &__contact,
+    &-social{
+        display: flex;
+        align-items: center;
+    }
+
+    &-social{
+        &__item{
+            margin-left: 1rem;
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .author{
+        &__image{
+            width: 35%;
+        }
+        &__content{
+            width: 65%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .author{
+        padding: 0 2rem;
+        flex-direction: column;
+        height: auto;
+        // &__image,
+        // &__content{
+        //     width: 100%;
+        // }
+        &__image{
+            height: 20rem;
+            border-radius: 1rem 1rem 0 0;
+        }
+        &__content{
+            border-radius: 0 0 1rem 1rem;
+        }
+    }
+}
+
+// Post___list
+@mixin flexbox($align: flex-start, $justify: flex-start, $flex-direction: row, $wrap: nowrap){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $flex-direction;
+    flex-wrap: $wrap;
+}
+
+.post{
+    &__list{
+        padding: 2rem;
+        @include flexbox();
+        margin-left: -2rem;
+    }
+
+    &__item{
+        margin-left: 2rem;
+        width: calc(33.3333% - 2rem);
+    }
+
+    &__image{
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
+
+    &__content{
+        padding: 2rem;
+        background-color: #fff;
+        border: 1px solid #eee;
+        
+        //cách để cho tấm hình author luôn nằm ở cuối
+        height: calc(100% - 20rem); /*20rem là của image*/
+        @include flexbox(flex-start, space-between, column);
+        //nếu dùng flex-start thay cho space-between cho maggrin auto vào &__author : đẩy hết khoảng trống còn lại
+    }
+
+    &__title{
+        font-size: 2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+    }
+
+    &__author{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 5rem;
+        object-fit: cover;
+    }
+}
+
+// Post2
+.post2{
+    padding: 2rem;
+    margin: 5rem auto;
+    max-width: 40rem;
+    background-color: #fff;
+    border-radius: 20px;
+    @include flexbox(center); /*align-item : center, còn các giá trị còn lại để mặc định*/
+    &__media{
+        width: 10rem;
+        height: 10rem;
+        border-radius: inherit;
+        flex-shrink: 0;
+        //flex-shrink : cho phép co lại hay không (mặc định là 1, cho phép co lại )
+        //flex-grow : cho phép dãn ra hay ko (mặc định là 0, ko cho phép dãn ra)
+    }
+    &__content{
+        //cách 1 width: calc(100% - 10rem);
+        flex-grow: 1;
+        width: 100%;
+    }
+}
+
+// Post3
+.post3{
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    @include flexbox(stretch, space-between, row, wrap); 
+    max-width: 100rem;
+    margin: 0 auto; /*ra giữa*/
+    &__left,
+    &__right{
+        width: calc(50% - 1rem);
+    }
+
+    &__media{
+        height: 25rem;
+        position: relative;
+        margin-bottom: 3.5rem;
+    }
+    
+    &__img{
+        @include size(100%);
+        object-fit: cover;
+        border-radius: 1rem;
+        overflow: hidden;
+        &--small{
+            @include size(15rem, 10rem);
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+    }
+
+    &__category{
+        color: white;
+        font-size: 1.2rem;
+        display: inline-block; /*span là inline*/
+        padding: 1rem;
+        border-radius: 2rem;
+        background-image: $gradient;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 2;
+    }
+
+    &__icon{
+        @include size(5rem);
+        @include flexbox(center, center);
+        color: white;
+        background-image: $gradient;
+        border-radius: 5rem;
+        position: absolute;
+        bottom: 0;
+        right: 2rem;
+        transform: translateY(50%);
+        z-index: 2;
+    }
+
+    &-author{
+        @include flexbox(center);
+        color: #999;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        &__avatar{
+            @include size(4rem);
+            border-radius: 4rem;
+            object-fit: cover;
+            margin-left: 1rem;
+        }
+
+        &__name{
+            margin-right: 2.5rem;
+            padding-right: 2.5rem;
+            position: relative;
+            //ko dùng mgr: 5rem luon vì befor chạy theo pading
+            &:before{
+                content: "";
+                @include size(5px);
+                border-radius: 1rem;
+                background-color: $primary;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__date{
+        color: #999;
+        font-size: 1.4rem;
+    }
+
+    &__title{
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+        color: #333;
+
+        &--small{
+            font-size: 1.6rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__desc{
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: #999;
+    }
+
+    &__item{
+        @include flexbox(center);
+        &:not(:last-child){
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+    }
+
+    &__link{
+        color: inherit;
+    }
+
+    &__content{
+        width: 100%;
+        flex-grow: 1;
+    }
+}
+
+@mixin maxWidth($value){
+    @media screen and (max-width: $value){
+        @content;
+    }
+}
+
+@include maxWidth(767px){
+    .post3{
+        &__left,
+        &__right{
+            width: 100%;
+        }
+
+        &__left{
+            margin-bottom: 2.5rem;
+        }
+        
+        &__img--small{
+            width: 10rem;
+            height: auto;
+        }
+
+        &__title{
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+
+            &--small{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

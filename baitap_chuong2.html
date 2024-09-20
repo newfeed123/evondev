@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        html{
+            font-size: 62.5%;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 20rem;
+            height: 30rem;
+            background-color: #ffa400;
+            color: black;
+            border: 3px yellow solid;
+            padding: 1rem;
+            margin: 1.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .text3{
+            max-width: 50rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;/*dọc*/
+            text-overflow: ellipsis;
+        }
+
+        .text1{
+            white-space: nowrap;/*chữ nằm trên 1 hàng và xuất hiện sroll ngang*/
+            max-width: 10rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: green;
+        }
+
+        .background{
+            width: 100vw;
+            height: 100vh;
+            background: url(https://images.unsplash.com/photo-1652011477091-0c8bbb8912ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60)
+                        no-repeat center right / cover;
+        }
+
+        .image{
+            width: 40rem;
+            height: 40rem;
+            border-radius: 50%;
+            object-fit: cover; /*hình ko bị méo*/
+        }
+
+        .link{
+            text-decoration: none;
+            background-color: blueviolet;
+            color: white;
+            padding: 1rem 5rem;
+            text-align: center;
+            margin-left: 2rem;
+        }
+
+        .link:hover{
+            color: black;
+            background-color: white;
+        }
+
+        .link--rounded{
+            border-radius: 4px;
+        }
+
+        .link--rounded2{
+            border-radius: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 1. Tạo 1 khối có class là "box" 200x300 , màu nền #ffa400 
+    chữ đen, border vàng, padding 10px, margin 15px, bo góc 4px, chữ canh giữa-->
+    <div class="box">
+        center me
+    </div>
+
+    <!-- 2. Tạo 1 khối có đoạn chữ rất dài bất kỳ, có độ rộng tối đa là 500px hiển thị 3 hàng
+    kết hợp dấu 3 chấm -->
+
+    <div class="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatem esse dolore praesentium molestias vitae! Esse similique commodi asperiores error, suscipit impedit magnam quod! Nam quam quos libero amet laboriosam.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nam aliquid molestiae deserunt dolorum animi facere alias in a cum nisi dolores accusantium tempore, quam reiciendis possimus voluptate nulla veritatis.
+    </div>
+
+    <!-- 3. Tạo 1 khối chữ dài có độ rộng tối đa là 100px, hiển thị trên 1 dòng, 
+    dấu 3 chấm ở cuối-->
+    <div class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatem esse dolore praesentium molestias vitae! Esse similique commodi asperiores error, suscipit impedit magnam quod! Nam quam quos libero amet laboriosam.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nam aliquid molestiae deserunt dolorum animi facere alias in a cum nisi dolores accusantium tempore, quam reiciendis possimus voluptate nulla veritatis.
+    </div>
+
+    <!-- 4. Tạo 1 khối 100vw - 100vh, hình nền phủ toàn khối, căn góc phải, no-repeat -->
+    <div class="background"></div>
+
+    <!-- 5. Tạo 1 khối 400x400, hình ảnh hiển thị bên, khối tròn, hình ko méo ko tràn khối tròn -->
+    <img src="https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw4MHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="" class="image">
+
+    <!-- img và a là inline gặp nhau sẽ đứng trên 1 hàng -->
+    <!-- 6. Tạo 3 nút cạnh nhau -->
+    <div class="button">
+        <a href="" class="link">Button</a>
+        <a href="" class="link link--rounded">Button</a>
+        <a href="" class="link link--rounded2">Button</a>
+    </div>
+</body>
+</html>

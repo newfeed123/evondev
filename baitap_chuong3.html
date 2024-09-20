@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 3rem;
+        }
+        .text-gradient{
+            text-transform: uppercase;
+            font-size: 10rem;
+            font-weight: bold;
+            background-image: linear-gradient(to left, #FF4895, #FFD96A);
+            display: inline-block;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        
+        .button{
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            display: inline-block;
+            background-image: linear-gradient(to left, #50cfc6, #68ecac);
+            padding: 1rem 3rem;
+            border-radius: 6px;
+            color: white;
+            box-shadow: 0 0 10px rgba(80, 207, 199, 0.848);
+        }
+
+        .color__item{
+            width: 10rem;
+            height: 10rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-left: 3rem;
+            margin-right: 3rem;
+        }
+
+        .color__item:first-child{
+            background-color: #a24bf0;
+        }
+        .color__item:nth-child(2){
+            background-color: #38dbb2;
+        }
+        .color__item:nth-child(3){
+            background-color: #ffa400;
+        }
+        .color__item:nth-last-child(2){
+            /* kế cuối */
+            background-color: #ff7800;
+        }
+        .color__item:last-child{
+            background-color: #07a787;
+        }
+
+        div[data-link^="https"]{
+            color: plum;
+        }
+        div[data-link$=".vn"]{
+            color: red;
+        }
+        div[data-name*="hello"]{
+            color:#FF4895;
+        }
+        input[name="email"]{
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Tạo text gradient-->
+    <h2 class="text-gradient">text</h2>
+
+    <!-- Tạo 6 button -->
+    <div class="button button--green">success</div>
+
+    <!-- Tạo 5 ô vuông màu -->
+    <ul class="color__list">
+        <li class="color__item"></li>
+        <li class="color__item"></li>
+        <li class="color__item"></li>
+        <li class="color__item"></li>
+        <li class="color__item"></li>
+    </ul>
+
+    <!-- cho html như sau dùng liến thức về Selectors để chọn ra các thẻ 'div' có 'data-link' kết thúc = '.vn' -->
+    <div data-link="https://google.com">google.com</div>
+    <div data-link="https://vnexpress.vn">facebook.vn</div>
+    <div data-name="hello">hello</div>
+    <div data-name="again hello">again hello</div>
+    <input type="text" name="email">
+    <input type="text" name="fullname">
+</body>
+</html>

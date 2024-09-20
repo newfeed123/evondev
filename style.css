@@ -1,0 +1,55 @@
+/* 
+    selector{
+        property: value;
+    }
+*/
+
+/* property: color, background-color
+    value: red, blue
+*/
+
+p{
+    /* color : màu chữ */
+    color: red;
+    color: #ffa400;
+    color: rbg(0,0,0);
+    color: rbga(0,0,0,0.5);
+}
+
+.background{
+    background-color: #299;
+    /* width: 100px; */
+    /* height: 100px; */
+
+    /* overflow: hidden; ẩn phần bị tràn ra ngoài;
+    overflow-x: hidden;
+    overflow-y: auto; xuất hiện scroll  */
+
+    /*nếu ND quá dài thì heigh tự động cao lên và có độ cao tối thiểu*/
+    /* min-height: 100px; */
+    min-width: 100px;
+}
+
+.background2{
+    background-image: url("https://images.unsplash.com/photo-1651693029270-bf3c29ad0b20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60");
+    /*muốn sd property background cần phải có width và height*/
+    /* width: 100%;
+    height: 1000px; */
+    /* background-position: center center;x - y */
+    /* background-size: cover;phủ hết khung */
+    /* background-repeat: no-repeat;hình nhỏ sẽ bị repeat nên phải xét property này */
+    /* background-attachment: fixed; */
+
+    /*sorthand*/
+    background: red url("https://images.unsplash.com/photo-1651693029270-bf3c29ad0b20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60")
+                no-repeat center center / cover;
+
+    /*đơn vị CSS hay dùng*/
+    width: 100vw;
+    /* width: 100%; độ rộng bằng độ rộng của thẻ cha chưa nó (hiện tại là wrap); */
+    height: 100vh;
+}
+
+.wrap{
+    width: 100px;
+}

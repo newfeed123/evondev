@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .bar{
+            width: 50rem;
+            height: 1rem;
+            background-color: #ccc;
+            margin: 5rem auto 0;
+            border-radius: 2rem;
+            position: relative;
+        }
+        .bar-progress{
+            width: 50%;
+            height: 100%; /*= size cha*/
+            border-radius: inherit;
+            background-color: green;
+        }
+        .bar-circle{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 2rem;
+            background-color: green;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <div class="bar-progress"></div>
+        <div class="bar-circle"></div>
+    </div>
+</body>
+</html>

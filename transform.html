@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 3rem;
+        } 
+        .boxed{
+            width: 5rem;
+            height: 5rem;
+            background-color: palevioletred;
+
+            /* tawg kích thước dài rộng 2 lần */
+            /* transform: scaleX(2) scaleY(2); */
+            /* transform: scale(2,2); viết tắt của scaleX và scaleY */
+            /* transform: scale scaleX scaleY */
+
+            /* transform: rotate(45deg); viết tắt của rotateX, Y, Z*/
+            
+            /* dịch theo chiều X, Y */
+            /* transform: translateX(10px) translateY(10px); */
+            /* transform: translateX(100%) translateY(100%); dịch theo chiều X = độ rộng của nó; */
+
+            /* shorthand  */
+            transform: scale(2) rotate(45deg) translate(100%,100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="boxed"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, ad aliquid? Consequatur fugit rerum at mollitia accusantium perferendis quas animi sint ullam amet corrupti quis nulla, itaque rem, fugiat autem.</p>
+</body>
+</html>

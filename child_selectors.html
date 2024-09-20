@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul{
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        li:first-child{
+            color: red;
+        }
+        li:last-child{
+            color: blueviolet;
+        }
+        li:nth-child(2){
+            color: orange;
+        }
+
+        /* chọn cái kế cuối */
+        li:nth-last-child(2){
+            color: yellow;
+        }
+
+        li:not(:first-child){
+            /* chọn tất cả trừ cái đầu tiên */
+            color: brown;
+        }
+
+        /* chọn những cái số lẻ odd, chẵn even*/
+        li:nth-child(odd){
+            color: black;
+        }
+        li:nth-child(even){
+            color: purple;
+        }
+
+        /* an + b */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+</body>
+</html>

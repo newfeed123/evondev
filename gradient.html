@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-size: 1.6rem;
+            font-weight: normal;
+        }
+
+        .boxed{
+            width: 20rem;
+            height: 20rem;
+            background-image: linear-gradient(to right bottom, #00aefd, #ffa400);
+
+            /* hướng derection : to right, to left, to bottom, to top
+            to right bottom (trái -> phải rồi chạy xuống dưới)
+            to left bottom (phải -> trái rồi chạy xuống dưới)
+            to right top
+            to left top */
+            
+            /*hoặc sử dụng độ deg */
+
+            /* color 1 và color2 */
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 3rem;
+            background-image: linear-gradient(to right bottom, #00aefd, #ffa400);
+
+            /* h3 là block, độ rộng = độ rộng thẻ cha (ở đây là body) */
+            display: inline-block;
+
+            margin: 1rem;
+
+            /* chữ có màu gradient */
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .background{
+            width: 100vw;
+            height: 100vh;
+            /* cho 2 background, thằng gradient phủ lên trên url */
+            background-image: linear-gradient(to right bottom, rgba(0, 173, 253, 0.601), hsla(39, 100%, 50%, 0.64)), 
+                              url("https://images.unsplash.com/photo-1651073787820-948cc2fbbb14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1175&q=80");
+            background-size: cover; /*phủ hết*/
+        }
+    </style>
+</head>
+<body>
+    <div class="boxed">
+    </div>
+
+    <h3 class="title">demo tiltle</h3>
+
+    <div class="background"></div>
+</body>
+</html>

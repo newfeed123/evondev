@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* font-size: 100% = 16px ở hầu hết tất cả trình duyệt 
+            1 em = 1 rem = 16px
+        */
+        .em{
+            width: 10em; /*160px => sau khi thay đổi font-size 320px*/
+            height: 10em; /*160px => 320px*/
+            background-color: #fff400;
+            /* em là đơn vị phụ thuộc vào thuộc tính font-size của chính nó*/
+            font-size: 32px; /*tăng lên gấp đôi => 1 rem sẽ là 32px*/
+        }
+        .rem{
+            width: 10rem;
+            height: 10rem;
+            background-color: #ffa400;
+            /*ream là đơn vị phụ thược vào fonr-size của thẻ html (root)*/
+        }
+        html{
+            font-size: 62.5%;
+        }
+        /* 100% = 16px
+        => 62.5 % = 10px
+        => lúc này 1 rem = 10px
+        thường sd đơn vị rem vì nó là đơn vị relative, nó ko cố định như px*/
+    </style>
+</head>
+<body>
+    <div class="em">EM</div>
+    <div class="rem">REM</div>
+
+</body>
+</html>
